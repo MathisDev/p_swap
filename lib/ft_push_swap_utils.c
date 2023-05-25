@@ -77,13 +77,21 @@ void	pb(char *l1,char *l2)
 
 void	ra(char *l1)
 {
-	size_t len;
+	int len;
+	int i;
 	char tmp;
 	
+	len = 0;
+	i = 0;
 	len = ft_strlen(l1);
 	if (len >= 1)
 	{
-		
+		tmp = l1[0];
+		while(l1[i] != '\0')
+		{
+			l1[i] = l1[i + 1]; 
+		}
+		l1[i] = tmp;
 	}
 }
 

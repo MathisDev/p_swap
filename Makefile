@@ -17,15 +17,20 @@ CC	= gcc
 FL	= -Wall -Werror -Wextra
 COMP	= $(CC) $(FL)
 EX	= push_swap
+NAME = push_swap.a
 
 # -- SRC -- #
 
-SRC	=
+SRC		=	ft_push_swap.c \
+			lib/aux_function.c \
+			lib/ft_push_swap_utils.c
 
+SRCO	=	(SRC:.c=.o)
 # -- Target -- #
 
 all:
-				$(COMP) $(SRC) -o $(EX)
+				arc rcs $(NAME) $(SRC0)
+				$(COMP) ft_push_swap.c -L. $(NAME) -o $(EX)
 
 clean:
 				$(RM) $(EX)
