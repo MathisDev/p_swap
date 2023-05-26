@@ -2,16 +2,17 @@
 # include <unistd.h>
 /* AUX */
 size_t	ft_strlen(const char *s);
-void add(char c,char *l1);
+void	print_str(char	*str);
+void    add(char c,char *l1);
 
-/* SWAP */ 
+/* SWAP */
 void	sa(char	*li);
-void	sb(char	*li); 
+void	sb(char	*li);
 void	ss(char *l1,char *l2);
-/* PUSH  */ 
+/* PUSH  */
 void	pb(char *l1,char *l2);
 void	pa(char *l1,char *l2);
-/* ROTATE */ 
+/* ROTATE */
 void	ra(char *l1);
 void	rb(char *l1);
 void	rr(char *l1,char *l2);

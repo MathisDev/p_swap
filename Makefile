@@ -17,7 +17,6 @@ CC	= gcc
 FL	= -Wall -Werror -Wextra
 COMP	= $(CC) $(FL)
 EX	= push_swap
-NAME = push_swap.a
 
 # -- SRC -- #
 
@@ -29,13 +28,9 @@ SRCO	=	(SRC:.c=.o)
 # -- Target -- #
 
 all:
-				arc rcs $(NAME) $(SRC0)
-				$(COMP) ft_push_swap.c -L. $(NAME) -o $(EX)
+				$(COMP) $(SRC) -o $(EX)
 
 clean:
 				$(RM) $(EX)
 
-fclean:			clean
-			$(RM) $(NAME)
-
-re:			fclean all
+re:			clean all

@@ -11,8 +11,16 @@
 /* ************************************************************************** */
 
 # include "lib/lib.h"
+# include <stdio.h>
 
 int main(int argc, char *argv[])
 {
-    
+    if (argc < 2)
+    {
+        print_str("Error");
+        return (0);
+    }
+    printf("%d\n",argc);
+    print_str(argv[0]);
+    print_str(argv[1]);
 }
